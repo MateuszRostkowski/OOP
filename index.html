@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+    }
+    #table1,#table2 {
+        padding: 10px;
+        width: 100%;
+    }
+    .row {
+        display: flex;
+        width: 100%;
+    }
+    .item {
+        width: 100%;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <h1>Dodaj studenta lub pracownika</h1>
+        <label>Imię
+            <input class="input__field" type="text" />
+        </label>
+        <label>Nazwisko
+            <input class="input__field" type="text" />
+        </label>
+        <label>Pesel
+            <input class="input__field" type="number" />
+        </label>
+        <label>Wiek
+            <input class="input__field" type="number" />
+        </label>
+        <label>Kierunek studiów
+            <input class="input__field" type="text" />
+        </label>
+        <label>Stanowisko
+            <input class="input__field" type="text" />
+        </label>
+        <div class="radio">
+                <label>Student
+                    <input class="input__field" type="radio" name="radio" checked/>
+                </label>
+                <label>Nauczyciel
+                    <input class="input__field" type="radio" name="radio" />
+                </label>
+            </div>
+        <button id="submit">Dodaj</button>
+    </div>
+    <h2>Lista studentów</h2>
+    <div id="table1"></div>
+    <h2>Lista pracowników</h2>
+    <div id="table2"></div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
