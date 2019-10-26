@@ -94,7 +94,13 @@ class CreatePerson {
         Render.renderStudents();
         Render.renderTeachers();
     }
+
+    static addToLocal(database) {
+        localStorage.setItem("students", JSON.stringify(database))
+    }
 }
+
+CreatePerson.addToLocal(studentList)
 
 class Render {
     static renderStudents() {
