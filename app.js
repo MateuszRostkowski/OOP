@@ -96,33 +96,6 @@ class CreatePerson {
     }
 }
 
-class Local {
-    static addStudentToLocal() {
-        localStorage.setItem("students", JSON.stringify(studentList))
-    }
-
-    static addTeacherToLocal() {
-        localStorage.setItem("teachers", JSON.stringify(teacherList))
-    }
-
-    static getStudentFromLocal() {
-        return localStorage.getItem(JSON.parse("students"))
-    }
-    static getTeachersFromLocal() {
-        return localStorage.getItem(JSON.parse("teachers"))
-    }
-    static checkLocal() {
-        if(localStorage.getItem('students') == null) {
-            Local.addStudentToLocal()
-        }
-        if(localStorage.getItem('teachers') == null) {
-            Local.addTeacherToLocal()
-        }
-    }
-}
-
-Local.checkLocal();
-
 class Render {
     static renderStudents() {
         studentDOM.innerHTML = `
